@@ -1,14 +1,13 @@
-{
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
-}
+{ 
+  "id": "123456",  // procurement record uuid
+  "purchaseId": "12345432", // coming from URL get param
+  "purchaseItemId": "12343123432345",  // OPTIONAL, coming from URL get param (present if supplier has chosen to fulfill one particular item only from the UI, or all of them at once using "Fulfill Products" button)
+  "supplierProcessStatus": "INVOICED", // on-screen UI user input
+  "fulfillmentId": "1234532134532345t432", // available in front-end 'redux' js context/component --> storeState.fulfillments.fulfillmentDetailsData.uuid 
+  "shipmentDetails": {
+    shipmentTrackingNumber: '...', // on-screen UI user input
+    shipmentProviderName: '...', // on-screen UI user input
+    shipmentStatus: '...', // on-screen UI user input
+    shipmentStatusUrl: '...', // on-screen UI user input
+    shipmentServiceType: '...' // on-screen UI user input
+ }
